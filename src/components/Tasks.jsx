@@ -6,6 +6,11 @@ class Tasks extends Component {
 		this.props.onLoad();
   }
   
+  onClick(e, id) {
+    console.log(id);
+		this.props.onClick();
+  }
+  
   render () {
     const { tasks } = this.props;
     
@@ -16,8 +21,8 @@ class Tasks extends Component {
           <ul className="list-group list-group-flush">
             { /* map over each task and display a list item for each one */ }
             { tasks.map(task => (
-              <li className="list-group-item list-group-item-action" key={ task.id }>
-                { task.task }
+              <li className="list-group-item list-group-item-action" onClick={e => this.onPress(e, task.id)} key={ task.id }>
+                {task.completed ? <p><s>{ task.task }</s> &#x2714;</p> : <b>{ task.task }</b>}
               </li>
             ))}
           </ul>

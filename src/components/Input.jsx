@@ -21,7 +21,6 @@ class Input extends Component {
 		e.preventDefault();
 		const data = this.state.value;
 		this.props.onSubmit({task: data});
-
 		this.setState({value: ''});
 	}
 
