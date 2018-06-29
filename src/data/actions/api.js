@@ -18,7 +18,6 @@ export const getTasks = () => dispatch => {
 };
 
 export const postTask = data => dispatch => {
-	console.log(data);
 	axios.post("/tasks", data).then(({ data }) => {
 		const task = data.data;
 		dispatch(addTask(task));

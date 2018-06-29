@@ -1,10 +1,7 @@
 const addTask = (state, { task }) => {
   return {
     ...state,
-    tasks: {
-      ...state.tasks,
-      [task.id]: task,
-    },
+    tasks: state.tasks.concat([task]),
   };
 };
 
