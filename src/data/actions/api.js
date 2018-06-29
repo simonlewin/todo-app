@@ -37,7 +37,7 @@ export const putTask = (id, data) => dispatch => {
 	});
 };
 
-export const patchTaskComplete = id => dispatch => {
+export const patchTaskComplete = (id, data) => dispatch => {
 	axios.patch(`/tasks/${id}/complete`, data).then(({ data }) => {
 		const task = data.data;
 		dispatch(completeTask(id, task));

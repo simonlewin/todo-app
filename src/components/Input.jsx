@@ -44,10 +44,10 @@ class Input extends Component {
 				<ul className='list-group'>
 					{ this.state.tasks.map((task, i) => (
 						<li className="list-group-item list-group-item-action" key={ i }>
-						<button className='btn btn-primary'>Complete</button>
+						{/* <button className='btn btn-primary'>Complete</button> */}
 						{ task }
-						<button className='btn btn-info'>Edit</button>
-						<button onSubmit={this.handleDelete(task)} className='btn btn-danger'>Delete</button>
+						{/* <button className='btn btn-info'>Edit</button> */}
+						{/* <button onSubmit={this.handleDelete(task)} className='btn btn-danger'>Delete</button> */}
 						</li>
 					))}
 				</ul>
