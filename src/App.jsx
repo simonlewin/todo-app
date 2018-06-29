@@ -6,10 +6,6 @@ import Input from "./containers/Input";
 
 import Tasks from "./containers/Tasks";
 
-const fields = [
-  { name: "task", label: "Task", value: "" },
-];
-
 const App = () => (
 	<Fragment>
     <Header>To Do</Header>
